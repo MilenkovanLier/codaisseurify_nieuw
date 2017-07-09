@@ -1,7 +1,8 @@
 
 <h1><%= @song.artist_name %></h1>
 
-<p>Title song:
-<%= @song.name_song %>
+<p>Title song:<%= @song.name_song %>
 <p>Duration: <%= @song.duration %></p>
 <p>Genre: <%= @song.genre %></p>
+
+<%= link_to "[Delete]", song_path(@song.id), method: :delete, data: { confirm: "Really?" } %>

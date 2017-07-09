@@ -9,5 +9,11 @@ Rails.application.routes.draw do
   delete "artists/:id" => "artists#destroy"
 
   get "songs" =>"songs#index"
+  get 'songs/new' => "songs#new", as: :new_song
   get "songs/:id" => "songs#show", as: :song
+
+  post "songs" => "songs#create"
+  delete "songs/:id" => "songs#destroy"
+
+
 end
