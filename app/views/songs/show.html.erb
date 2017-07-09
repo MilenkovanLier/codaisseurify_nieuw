@@ -1,22 +1,7 @@
 
-<p id="notice"><%= notice %></p>
+<h1><%= @song.artist_name %></h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
-
-<h4>List of Songs</h4>
-
-<% if @artist.songs.any? %>
-  <ul>
-    <% @artist.songs.each do |song| %>
-      <li><%= song.name %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>There are no songs with this artist.</p>
-<% end %>
-
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+<p>Title song:
+<%= @song.name_song %>
+<p>Duration: <%= @song.duration %></p>
+<p>Genre: <%= @song.genre %></p>
